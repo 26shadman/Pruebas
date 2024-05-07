@@ -1,0 +1,23 @@
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1500px; /* Cambiar el valor según tus necesidades */
+    }
+}
+
+.mt-5 {
+    margin-top: 1.5rem !important;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 3000px !important;
+    }
+}
