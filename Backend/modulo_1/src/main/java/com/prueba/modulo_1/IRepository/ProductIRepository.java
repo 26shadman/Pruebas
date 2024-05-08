@@ -11,7 +11,8 @@ import com.prueba.modulo_1.Entity.Product;
 @Repository
 public interface ProductIRepository  extends JpaRepository<Product, Long>{
 
-	@Query("SELECT P FROM  P WHRE P.nameProduct like %?1% OR "
-			+ "P.status")
+	@Query("SELECT p FROM  Product p WHERE p.productName like %?1% OR "
+			+ "p.status LIKE %?1%")
+	
 	List<Product> filterProducts(String filter);
 }

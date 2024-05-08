@@ -18,14 +18,14 @@ public class Customer {
     @Column(name = "document_type", nullable = false, length = 5)
     private String documentType;
     
-    @Column(name = "client_document", nullable = false, unique = true, length = 10)
-    private String clientDocument;
+    @Column(name = "document", nullable = false, unique = true, length = 10)
+    private String document;
     
     @Column(name = "client_names", nullable = false, length = 45)
     private String clientNames;
     
     @Column(name = "clients_last_name", nullable = false, length = 45)
-    private String clientsLastNames; // Corregido el nombre de la columna
+    private String clientsLastNames; 
     
     @Column(name = "client_phone_number", nullable = false, length = 13)
     private String clientPhoneNumber;
@@ -37,78 +37,79 @@ public class Customer {
     private String city;
 
     @Column(name = "status", nullable = false)
-    private boolean status;
+    private Boolean status;
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getDocumentType() {
-        return documentType;
-    }
+	public String getDocumentType() {
+		return documentType;
+	}
 
-    public void setDocumentType(String documentType) {
-        this.documentType = documentType;
-    }
+	public void setDocumentType(String documentType) {
+		this.documentType = documentType;
+	}
 
-    public String getClientDocument() {
-        return clientDocument;
-    }
+	public String getClientDocument() {
+		return document;
+	}
 
-    public void setClientDocument(String clientDocument) {
-        this.clientDocument = clientDocument;
-    }
+	public void setClientDocument(String clientDocument) {
+		this.document = clientDocument;
+	}
 
-    public String getClientNames() {
-        return clientNames;
-    }
+	public String getClientNames() {
+		return clientNames;
+	}
 
-    public void setClientNames(String clientNames) {
-        this.clientNames = clientNames;
-    }
+	public void setClientNames(String clientNames) {
+		this.clientNames = clientNames;
+	}
 
-    public String getClientsLastName() {
-        return clientsLastNames;
-    }
+	public String getClientsLastNames() {
+		return clientsLastNames;
+	}
 
-    public void setClientsLastName(String clientsLastName) {
-        this.clientsLastNames = clientsLastName;
-    }
+	public void setClientsLastNames(String clientsLastNames) {
+		this.clientsLastNames = clientsLastNames;
+	}
 
-    public String getClientPhoneNumber() {
-        return clientPhoneNumber;
-    }
+	public String getClientPhoneNumber() {
+		return clientPhoneNumber;
+	}
 
-    public void setClientPhoneNumber(String clientPhoneNumber) {
-        this.clientPhoneNumber = clientPhoneNumber;
-    }
+	public void setClientPhoneNumber(String clientPhoneNumber) {
+		this.clientPhoneNumber = clientPhoneNumber;
+	}
 
-    public String getCustomerAddress() {
-        return customerAddress;
-    }
+	public String getCustomerAddress() {
+		return customerAddress;
+	}
 
-    public void setCustomerAddress(String customerAddress) {
-        this.customerAddress = customerAddress;
-    }
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
+	}
 
-    public String getCity() {
-        return city;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-    public boolean isStatus() {
-        return status;
-    }
+	public Boolean getStatus() {
+		return status;
+	}
 
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
+    
+    
 }

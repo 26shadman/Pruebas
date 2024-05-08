@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.prueba.modulo_1.Entity.Customer;
 import com.prueba.modulo_1.IRepository.CustomerIRepository;
-import com.prueba.modulo_1.IService.CustomerIservice;
+import com.prueba.modulo_1.IService.CustomerIService;
 
 @Service
-public class CustomerService implements CustomerIservice {
+public class CustomerService implements CustomerIService {
 
 	@Autowired
     private CustomerIRepository customerIRepository;
@@ -40,11 +40,11 @@ public class CustomerService implements CustomerIservice {
             existingCustomer.setDocumentType(customerDetails.getDocumentType());
             existingCustomer.setClientDocument(customerDetails.getClientDocument());
             existingCustomer.setClientNames(customerDetails.getClientNames());
-            existingCustomer.setClientsLastName(customerDetails.getClientsLastName());
+            existingCustomer.setClientsLastNames(customerDetails.getClientsLastNames());
             existingCustomer.setClientPhoneNumber(customerDetails.getClientPhoneNumber());
             existingCustomer.setCustomerAddress(customerDetails.getCustomerAddress());
             existingCustomer.setCity(customerDetails.getCity());
-            existingCustomer.setStatus(customerDetails.isStatus());
+            existingCustomer.setStatus(customerDetails.getStatus());
             return customerIRepository.save(existingCustomer);
         } else {
             return null;

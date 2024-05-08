@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.prueba.modulo_1.Entity.Customer;
 
-public interface CustomerIservice {
+public interface CustomerIService {
 
 	Customer saveCustomer(Customer customer);
     

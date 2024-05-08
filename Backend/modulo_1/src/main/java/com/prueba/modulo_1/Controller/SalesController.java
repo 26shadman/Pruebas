@@ -14,57 +14,60 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.prueba.modulo_1.Entity.Customer;
+import com.prueba.modulo_1.Entity.Sales;
 import com.prueba.modulo_1.IService.CustomerIService;
+import com.prueba.modulo_1.IService.SalesIService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/customer")
-public class CustomerController {
+@RequestMapping("/sales")
+public class SalesController {
 
 	@Autowired
-    private CustomerIService customerService;
+    private SalesIService salesService;
 
     @GetMapping
-    public ResponseEntity<List<Customer>> getAllCustomers() {
-        List<Customer> customers = customerService.getAllCustomers();
-        return new ResponseEntity<>(customers, HttpStatus.OK);
+    public ResponseEntity<List<Sales>> getAllSales() {
+        List<Sales> sales = salesService.getAllSaless();
+        return new ResponseEntity<>(sales, HttpStatus.OK);
     }
 
     @GetMapping("/filter/{filtro}")
-    public ResponseEntity<List<Customer>> filterCustomers(@PathVariable String filtro) {
-        List<Customer> customers = customerService.filterCustomers(filtro);
-        if (customers.isEmpty()) {
+    public ResponseEntity<List<Sales>> filterCustomers(@PathVariable String filtro) {
+        List<Sales> sales = salesService.filterSaless(filtro);
+        if (sales.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(customers, HttpStatus.OK);
+        return new ResponseEntity<>(sales, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Customer> saveCustomer(@RequestBody Customer customer) {
-    	Customer newCustomer = customerService.saveCustomer(customer);
-        return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
+    public ResponseEntity<Sales> saveSales(@RequestBody Sales sales) {
+    	Sales newSales = salesService.saveSales(sales);
+        return new ResponseEntity<>(newSales, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCustomer(@PathVariable Long id) {
-    	customerService.deleteCustomer(id);
+    public ResponseEntity<Void> deleteSales(@PathVariable Long id) {
+    	salesService.deleteSales(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateCustomer(@PathVariable Long id, @RequestBody Customer customerDetails) {
-        if (customerDetails.getStatus() == null || customerDetails.getStatus().equals("")) {
+    public ResponseEntity<?> updateSales(@PathVariable Long id, @RequestBody Sales salesDetails) {
+        if (salesDetails.getStatus() == null || salesDetails.getStatus().equals("")) {
             // Si el campo status es nulo o vacío, enviar una respuesta de error con el mensaje apropiado
             return ResponseEntity.badRequest().body("El campo 'Estado', no puede quedar vacío.");
         }
         
-        Customer updatedCustomer = customerService.updateCustomer(id, customerDetails);
-        if (updatedCustomer == null) {
+        Sales updatedSales = salesService.updateSales(id, salesDetails);
+        if (updatedSales == null) {
             // Manejar el caso en el que no se pueda encontrar el cliente con el ID dado
             return ResponseEntity.notFound().build();
         }
         
-        return ResponseEntity.ok(updatedCustomer);
+        return ResponseEntity.ok(updatedSales);
     }
 }

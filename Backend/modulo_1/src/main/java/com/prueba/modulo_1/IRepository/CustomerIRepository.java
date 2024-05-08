@@ -13,5 +13,6 @@ public interface CustomerIRepository extends JpaRepository<Customer, Long> {
 	@Query("SELECT c FROM Customer c WHERE c.clientNames LIKE %?1% OR "
 	        + "c.clientsLastNames LIKE %?1% OR "
 	        + "c.city LIKE %?1%")
+	
 	List<Customer> filterCustomers(String filter);
 }
