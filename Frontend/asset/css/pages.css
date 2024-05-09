@@ -21,3 +21,15 @@
         max-width: 3000px !important;
     }
 }
+
+.btn-eliminar {
+    background-color: #ff9999;
+}
+
+.btn-editar {
+    background-color: #99ccff;
+}
+
+.btn-info{
+    background-color: #42737c;
+}
