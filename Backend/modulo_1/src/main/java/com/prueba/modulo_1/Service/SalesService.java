@@ -5,8 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.prueba.modulo_1.Entity.Customer;
 import com.prueba.modulo_1.Entity.Sales;
 import com.prueba.modulo_1.IRepository.SalesIRepository;
 import com.prueba.modulo_1.IService.SalesIService;

@@ -56,7 +56,7 @@ public class CustomerController {
     public ResponseEntity<?> updateCustomer(@PathVariable Long id, @RequestBody Customer customerDetails) {
         if (customerDetails.getStatus() == null || customerDetails.getStatus().equals("")) {
             // Si el campo status es nulo o vacío, enviar una respuesta de error con el mensaje apropiado
-            return ResponseEntity.badRequest().body("El campo 'Estado', no puede quedar vacío.");
+            return ResponseEntity.badRequest().body("El campo 'Estado' no puede quedar vacío.");
         }
         
         Customer updatedCustomer = customerService.updateCustomer(id, customerDetails);

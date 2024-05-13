@@ -35,8 +35,8 @@ public class Product {
     @Column(name = "discount_percentage", nullable = false)
     private int discountPercentage;
     
-    @Column(name = "status", nullable = false, length = 10)
-    private String status;
+    @Column(name = "status", nullable = false)
+    private Boolean status;
 
     public Long getId() {
         return id;
@@ -94,11 +94,11 @@ public class Product {
         this.discountPercentage = discountPercentage;
     }
 
-	public String getStatus() {
+	public Boolean getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Boolean status) {
 		this.status = status;
 	}
     

@@ -81,7 +81,7 @@
 body {
     font-size: 15px;
     font-family: "Open Sans", sans-serif;
-    background-image: url("../img/Esquizofrenia.jpg");
+    background-image: url("../");
     background-size: 800px;
     background-position: center;
     background-repeat: no-repeat;
@@ -196,12 +196,13 @@ body {
     width: 100%;
 }
 
-/* .row {
+.row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
-    flex-wrap: wrap;
     margin-top: calc(-1* var(--bs-gutter-y));
-    margin-right: calc(-5* var(--bs-gutter-x));
+    margin-right: calc(-.5* var(--bs-gutter-x));
     margin-left: calc(-.5* var(--bs-gutter-x));
-} */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

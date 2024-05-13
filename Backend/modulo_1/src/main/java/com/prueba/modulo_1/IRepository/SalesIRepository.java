@@ -5,10 +5,8 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 import com.prueba.modulo_1.Entity.Sales;
 
-@Repository
 public interface SalesIRepository extends JpaRepository<Sales, Long> {
 
     @Query("SELECT s FROM Sales s JOIN s.customer c WHERE (c.clientNames LIKE %:filter% OR "

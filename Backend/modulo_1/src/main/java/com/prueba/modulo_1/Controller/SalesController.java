@@ -14,10 +14,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.prueba.modulo_1.Entity.Customer;
 import com.prueba.modulo_1.Entity.Sales;
-import com.prueba.modulo_1.IService.CustomerIService;
 import com.prueba.modulo_1.IService.SalesIService;
 
 @CrossOrigin

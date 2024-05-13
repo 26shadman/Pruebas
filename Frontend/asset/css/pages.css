@@ -4,7 +4,7 @@
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1500px; /* Cambiar el valor según tus necesidades */
+        max-width: 1500px;
     }
 }
 
@@ -23,13 +23,25 @@
 }
 
 .btn-eliminar {
-    background-color: #ff9999;
+    background-color: #e45e5e;
 }
 
 .btn-editar {
-    background-color: #99ccff;
+    background-color: #478bcf;
 }
 
 .btn-info{
-    background-color: #42737c;
+    background-color: #c7f7ff;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    padding: var(--bs-modal-header-padding);
+    border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    border-top-left-radius: var(--bs-modal-inner-border-radius);
+    border-top-right-radius: var(--bs-modal-inner-border-radius);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
 }

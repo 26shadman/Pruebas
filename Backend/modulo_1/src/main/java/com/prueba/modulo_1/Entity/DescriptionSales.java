@@ -17,6 +17,7 @@ public class DescriptionSales {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@ManyToOne
 	@JoinColumn(name = "customer_id_customer", nullable = false)
 	private Customer customerIdcustomer;
 	
